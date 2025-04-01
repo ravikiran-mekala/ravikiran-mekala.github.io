@@ -6,7 +6,7 @@
 
 ## About Me
 
-I am a results-driven Software Engineer with over six years of experience in designing and developing scalable backend systems. My expertise lies in architecting microservices, optimizing cloud-based pipelines, and building reliable, high-performance solutions for complex, distributed environments.
+I am a results-driven Software Engineer with over seven years of experience in designing and developing scalable backend systems. My expertise lies in architecting microservices, optimizing cloud-based pipelines, and building reliable, high-performance solutions for complex, distributed environments.
 
 ---
 
