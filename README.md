@@ -1,5 +1,3 @@
-# Ravi Kiran Mekala
-
 💻 Senior Software Backend Engineer | ⚙️ Scalable Systems Enthusiast
 
 📍 Dallas, TX • 📧 ravikiran.utdallas@gmail.com • [🔗 LinkedIn](https://www.linkedin.com/in/ravikiran-m/)
