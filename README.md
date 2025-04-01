@@ -5,16 +5,23 @@ Senior Software Backend Engineer | Scalable Systems Enthusiast
 📍 Dallas, TX • 📧 ravikiran.utdallas@gmail.com • [LinkedIn](https://www.linkedin.com/in/ravikiran-m/)
 
 ---
-
 ## About Me
 
-I’m a passionate Software Engineer with 6+ years of experience architecting and building scalable backend systems. I specialize in designing microservices, optimizing cloud pipelines, and solving complex system-level problems using Python, Django, AWS, and a range of distributed technologies.
-
-Currently pursuing my **Master's in Computer Science** at **The University of Texas at Dallas**, I’ve also worked in diverse environments—from startups to enterprise-level systems—delivering production-ready solutions that handle millions of transactions.
+I am a results-driven Software Engineer with over six years of experience in designing and developing scalable backend systems. My expertise lies in architecting microservices, optimizing cloud-based pipelines, and building reliable, high-performance solutions for complex, distributed environments.
 
 ---
 
-## 🛠️ Tech Stack & Skills
+## Education
+
+**Indian Institute of Technology, Guwahati**  
+*B.Tech in Electronics and Electrical Engineering*
+
+**University of Texas at Dallas**  
+*M.S. in Computer Science* (GPA: 3.975/4.0)
+
+---
+
+## Tech Stack & Skills
 
 - **Languages**: Python (advanced), Java (beginner), JavaScript (beginner)  
 - **Frameworks**: Django, Flask, Node.js  
@@ -48,22 +55,6 @@ Currently pursuing my **Master's in Computer Science** at **The University of Te
 *Sep 2023 – Dec 2023*  
 - Built a malware detection pipeline using XGBoost & DNN  
 - Achieved 97% classification accuracy using VirusTotal & MITRE ATT&CK data
-
----
-
-## 🏆 Achievements
-
-- 🥇 **Geospatial World Innovation Award** for "Add-Fix" Application at Delhivery (2018)
-
----
-
-## 📚 Education
-
-🎓 **University of Texas at Dallas**  
-*M.S. in Computer Science* (GPA: 3.975/4.0)
-
-🎓 **Indian Institute of Technology, Guwahati**  
-*B.Tech in Electronics and Electrical Engineering*
 
 ---
 
