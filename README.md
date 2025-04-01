@@ -1,10 +1,11 @@
 # Ravi Kiran Mekala
 
-Senior Software Backend Engineer | Scalable Systems Enthusiast
+💻 Senior Software Backend Engineer | ⚙️ Scalable Systems Enthusiast
 
-📍 Dallas, TX • 📧 ravikiran.utdallas@gmail.com • [LinkedIn](https://www.linkedin.com/in/ravikiran-m/)
+📍 Dallas, TX • 📧 ravikiran.utdallas@gmail.com • [🔗 LinkedIn](https://www.linkedin.com/in/ravikiran-m/)
 
 ---
+
 ## About Me
 
 I am a results-driven Software Engineer with over six years of experience in designing and developing scalable backend systems. My expertise lies in architecting microservices, optimizing cloud-based pipelines, and building reliable, high-performance solutions for complex, distributed environments.
@@ -13,15 +14,15 @@ I am a results-driven Software Engineer with over six years of experience in des
 
 ## Education
 
-**Indian Institute of Technology, Guwahati**  
+**🎓 Indian Institute of Technology, Guwahati**  
 *B.Tech in Electronics and Electrical Engineering*
 
-**University of Texas at Dallas**  
+**🎓 University of Texas at Dallas**  
 *M.S. in Computer Science* (GPA: 3.975/4.0)
 
 ---
 
-## Tech Stack & Skills
+## 🧰 Tech Stack & Skills
 
 - **Languages**: Python (advanced), Java (beginner), JavaScript (beginner)  
 - **Frameworks**: Django, Flask, Node.js  
