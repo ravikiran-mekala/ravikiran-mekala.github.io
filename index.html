@@ -19,10 +19,13 @@ layout: default
 
 <!-- Hero -->
 <section class="hero">
+  <canvas id="particle-canvas"></canvas>
   <div class="hero-content">
     <img src="{{ site.logo }}" alt="Ravi Kiran Mekala" class="hero-photo">
     <h1>Ravi Kiran Mekala</h1>
-    <p class="subtitle">Senior Software Engineer</p>
+    <p class="subtitle">
+      <span class="typing-text"></span><span class="typing-cursor">|</span>
+    </p>
     <p class="tagline">Building scalable backend systems, AI-powered solutions, and high-throughput data pipelines. 7+ years turning complex distributed challenges into reliable, production-grade software.</p>
     <div class="hero-buttons">
       <a href="mailto:{{ site.email }}" class="btn btn-primary">Get in Touch</a>
@@ -31,40 +34,54 @@ layout: default
   </div>
 </section>
 
+<!-- Wave: Hero → About -->
+<div class="wave-divider wave-hero-about">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,64 C360,120 1080,0 1440,64 L1440,120 L0,120 Z" fill="var(--slate-50)"/>
+  </svg>
+</div>
+
 <!-- About -->
 <section id="about" class="section section-alt">
-  <div class="container fade-in">
+  <div class="container fade-in-up">
     <h2 class="section-title">About Me</h2>
     <div class="section-line"></div>
     <p class="about-text">
       I am a results-driven Software Engineer with over seven years of experience in designing and developing scalable backend systems. My expertise lies in architecting microservices, optimizing cloud-based pipelines, and building reliable, high-performance solutions for complex, distributed environments. Recently, I've been focused on integrating AI and LLM capabilities into production systems — from RAG-powered email intelligence to automated malware classification pipelines.
     </p>
     <div class="stat-cards">
-      <div class="stat-card">
-        <div class="stat-number">7+</div>
+      <div class="stat-card glass-card">
+        <div class="stat-number" data-target="7" data-suffix="+">0</div>
         <div class="stat-label">Years of Experience</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">72M</div>
+      <div class="stat-card glass-card">
+        <div class="stat-number" data-target="72" data-suffix="M">0</div>
         <div class="stat-label">Events Processed / Day</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">97%</div>
+      <div class="stat-card glass-card">
+        <div class="stat-number" data-target="97" data-suffix="%">0</div>
         <div class="stat-label">ML Classification Accuracy</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Wave: About → Skills -->
+<div class="wave-divider wave-about-skills">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,32 C480,100 960,0 1440,80 L1440,120 L0,120 Z" fill="var(--slate-50)"/>
+  </svg>
+</div>
+
 <!-- Skills -->
 <section id="skills" class="section">
-  <div class="container fade-in">
+  <div class="container fade-in-up">
     <h2 class="section-title">Skills & Tools</h2>
     <div class="section-line"></div>
     {% for group in site.data.skills %}
     <div class="skills-group">
       <h3>{{ group.category }}</h3>
-      <div class="skill-pills">
+      <div class="skill-pills stagger-children">
         {% for skill in group.items %}
         <span class="skill-pill">{{ skill }}</span>
         {% endfor %}
@@ -74,14 +91,23 @@ layout: default
   </div>
 </section>
 
+<!-- Wave: Skills → Experience -->
+<div class="wave-divider wave-skills-exp">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,80 C360,0 1080,120 1440,40 L1440,120 L0,120 Z" fill="white"/>
+  </svg>
+</div>
+
 <!-- Experience -->
 <section id="experience" class="section section-alt">
-  <div class="container fade-in">
+  <div class="container fade-in-up">
     <h2 class="section-title">Experience</h2>
     <div class="section-line"></div>
     <div class="timeline">
+      <div class="timeline-progress"></div>
       {% for job in site.data.experience %}
-      <div class="timeline-item">
+      <div class="timeline-item glass-card">
+        <div class="timeline-dot"></div>
         <div class="timeline-header">
           <div class="timeline-company">{{ job.company }}</div>
           <div class="timeline-role">{{ job.role }}</div>
@@ -102,14 +128,21 @@ layout: default
   </div>
 </section>
 
+<!-- Wave: Experience → Education -->
+<div class="wave-divider wave-exp-edu">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,64 C360,120 1080,0 1440,64 L1440,120 L0,120 Z" fill="var(--slate-50)"/>
+  </svg>
+</div>
+
 <!-- Education -->
 <section id="education" class="section">
-  <div class="container fade-in">
+  <div class="container fade-in-left">
     <h2 class="section-title">Education</h2>
     <div class="section-line"></div>
     <div class="edu-grid">
       {% for edu in site.data.education %}
-      <div class="edu-card">
+      <div class="edu-card glass-card scale-in">
         <div class="edu-institution">{{ edu.institution }}</div>
         <div class="edu-degree">{{ edu.degree }}</div>
         <div class="edu-details">
@@ -121,19 +154,36 @@ layout: default
   </div>
 </section>
 
+<!-- Wave: Education → Achievement -->
+<div class="wave-divider wave-edu-ach">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,40 C480,100 960,20 1440,80 L1440,120 L0,120 Z" fill="var(--blue)"/>
+  </svg>
+</div>
+
 <!-- Achievement -->
-<div class="achievement-banner fade-in">
+<div class="achievement-banner fade-in-up">
   <h3>Geospatial World Innovation Award 2018</h3>
   <p>Recognized for innovative GPS-based locality mapping solution at Delhivery</p>
 </div>
 
+<!-- Wave: Achievement → Footer -->
+<div class="wave-divider wave-ach-footer">
+  <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+    <path d="M0,80 C360,0 1080,120 1440,40 L1440,120 L0,120 Z" fill="var(--slate-900)"/>
+  </svg>
+</div>
+
 <!-- Footer / Contact -->
 <footer id="contact" class="footer">
-  <div class="footer-links">
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-    <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
-    <span>{{ site.location }}</span>
+  <div class="footer-glow"></div>
+  <div class="footer-content">
+    <div class="footer-links">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+      <span>{{ site.location }}</span>
+    </div>
+    <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Ravi Kiran Mekala. All rights reserved.</p>
   </div>
-  <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Ravi Kiran Mekala. All rights reserved.</p>
 </footer>
