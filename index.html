@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="#" class="nav-brand">Ravi Kiran Mekala</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="{{ site.logo }}" alt="Ravi Kiran Mekala" class="hero-photo">
+    <h1>Ravi Kiran Mekala</h1>
+    <p class="subtitle">Senior Software Engineer</p>
+    <p class="tagline">Building scalable backend systems, AI-powered solutions, and high-throughput data pipelines. 7+ years turning complex distributed challenges into reliable, production-grade software.</p>
+    <div class="hero-buttons">
+      <a href="mailto:{{ site.email }}" class="btn btn-primary">Get in Touch</a>
+      <a href="{{ site.linkedin }}" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section section-alt">
+  <div class="container fade-in">
+    <h2 class="section-title">About Me</h2>
+    <div class="section-line"></div>
+    <p class="about-text">
+      I am a results-driven Software Engineer with over seven years of experience in designing and developing scalable backend systems. My expertise lies in architecting microservices, optimizing cloud-based pipelines, and building reliable, high-performance solutions for complex, distributed environments. Recently, I've been focused on integrating AI and LLM capabilities into production systems — from RAG-powered email intelligence to automated malware classification pipelines.
+    </p>
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="stat-number">7+</div>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">72M</div>
+        <div class="stat-label">Events Processed / Day</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">97%</div>
+        <div class="stat-label">ML Classification Accuracy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="container fade-in">
+    <h2 class="section-title">Skills & Tools</h2>
+    <div class="section-line"></div>
+    {% for group in site.data.skills %}
+    <div class="skills-group">
+      <h3>{{ group.category }}</h3>
+      <div class="skill-pills">
+        {% for skill in group.items %}
+        <span class="skill-pill">{{ skill }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="section section-alt">
+  <div class="container fade-in">
+    <h2 class="section-title">Experience</h2>
+    <div class="section-line"></div>
+    <div class="timeline">
+      {% for job in site.data.experience %}
+      <div class="timeline-item">
+        <div class="timeline-header">
+          <div class="timeline-company">{{ job.company }}</div>
+          <div class="timeline-role">{{ job.role }}</div>
+          <div class="timeline-meta">
+            <span>{{ job.period }}</span>
+            <span>{{ job.location }}</span>
+          </div>
+          <div class="timeline-tech">{{ job.tech }}</div>
+        </div>
+        <ul class="timeline-bullets">
+          {% for bullet in job.bullets %}
+          <li>{{ bullet }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section">
+  <div class="container fade-in">
+    <h2 class="section-title">Education</h2>
+    <div class="section-line"></div>
+    <div class="edu-grid">
+      {% for edu in site.data.education %}
+      <div class="edu-card">
+        <div class="edu-institution">{{ edu.institution }}</div>
+        <div class="edu-degree">{{ edu.degree }}</div>
+        <div class="edu-details">
+          {{ edu.period }}{% if edu.gpa != "" %} &middot; GPA: {{ edu.gpa }}{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Achievement -->
+<div class="achievement-banner fade-in">
+  <h3>Geospatial World Innovation Award 2018</h3>
+  <p>Recognized for innovative GPS-based locality mapping solution at Delhivery</p>
+</div>
+
+<!-- Footer / Contact -->
+<footer id="contact" class="footer">
+  <div class="footer-links">
+    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+    <span>{{ site.location }}</span>
+  </div>
+  <p class="footer-copy">&copy; {{ 'now' | date: '%Y' }} Ravi Kiran Mekala. All rights reserved.</p>
+</footer>

@@ -1,0 +1,41 @@
+- company: Sur La Table
+  role: Senior Software Engineer
+  period: Jul 2024 – Present
+  location: Dallas, TX
+  tech: Python, Django, AWS ECS, Docker, Terraform, Kafka, PostgreSQL
+  bullets:
+    - Architected and deployed RAG-powered MessageWise system using AWS Bedrock and OpenAI APIs, enabling intelligent email classification and automated response generation for customer service operations
+    - Designed and implemented Email Hygiene microservice processing 72M+ events/day, automating bounce handling, suppression management, and deliverability optimization across marketing campaigns
+    - Built event-driven microservices for syncing e-commerce data (inventory, orders, SKUs) with Toolio, enabling fast data-driven inventory management decisions using ECS, Docker, and Terraform
+
+- company: BlackBerry
+  role: Machine Learning Engineer Intern
+  period: Sep 2023 – Dec 2023
+  location: Dallas, TX
+  tech: Python, XGBoost, DNN, VirusTotal API, MITRE ATT&CK, Scikit-Learn
+  bullets:
+    - Built end-to-end malware detection pipeline using XGBoost and Deep Neural Networks, achieving 97% classification accuracy on multi-class threat categorization
+    - Engineered feature extraction system leveraging VirusTotal and MITRE ATT&CK frameworks to transform raw malware indicators into high-signal training features
+    - Developed automated data collection and labeling pipeline processing thousands of malware samples for continuous model retraining
+
+- company: Vyntelligence
+  role: Senior Software Engineer
+  period: Nov 2021 – Aug 2022
+  location: Remote
+  tech: Python, AWS (Lambda, Chime, S3), Serverless, Node.js, PostgreSQL
+  bullets:
+    - Built scalable AWS pipelines to efficiently handle Amazon Chime video calls for a real-time Live Call feature, enabling remote inspections and consultations
+    - Achieved 50% reduction in on-site visits by enabling high-quality remote video assessments with real-time annotation capabilities
+    - Designed serverless architecture using AWS Lambda and S3 for cost-effective media processing and storage at scale
+
+- company: Delhivery
+  role: Senior Software Engineer
+  period: Jun 2016 – Oct 2021
+  location: India
+  tech: Python, Django, Kafka, PostgreSQL, Redis, MongoDB, ElasticSearch, Docker
+  bullets:
+    - Rebuilt Fleet Management System from scratch for 30,000+ vehicles across India, cutting manual fleet operations work by 90% and enabling real-time tracking and automated dispatch
+    - Scaled Waybill service to support 2.1 billion shipments with high availability, implementing efficient database sharding and caching strategies
+    - Developed GPS-based locality mapping application that reduced last-mile delivery operations costs by 6% through optimized route planning
+    - Architected high-throughput event streaming pipelines using Kafka to process millions of logistics events daily for real-time analytics and operational dashboards
+    - Led migration of monolithic systems to microservices architecture, improving deployment frequency by 10x and reducing system downtime

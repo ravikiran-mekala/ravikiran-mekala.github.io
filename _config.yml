@@ -1,5 +1,10 @@
 title: Ravi Kiran Mekala
+description: Senior Software Engineer | Scalable Systems & AI
+url: "https://ravikiran-mekala.github.io"
+baseurl: ""
 logo: /assets/img/headshot_circle.png
-#description: text below image
-#show_downloads: true
-theme: jekyll-theme-minimal
+
+email: ravikiran.utdallas@gmail.com
+linkedin: https://www.linkedin.com/in/ravikiran-m/
+github: https://github.com/ravikiran-mekala
+location: Dallas, TX
