@@ -182,17 +182,8 @@ img { max-width: 100%; display: block; }
   height: 160px;
   border-radius: 50%;
   margin: 0 auto 2rem;
-  border: 4px solid transparent;
-  background-image: linear-gradient(var(--hero-bg-2), var(--hero-bg-2)),
-                    linear-gradient(135deg, #2563eb, #38bdf8, #a855f7, #2563eb);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  box-shadow: 0 10px 40px rgba(56, 189, 248, 0.2);
-  animation: borderRotate 4s linear infinite;
-}
-
-@keyframes borderRotate {
-  to { filter: hue-rotate(360deg); }
+  border: 4px solid white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .hero h1 {
@@ -317,7 +308,7 @@ img { max-width: 100%; display: block; }
   padding: 5rem 2rem;
 }
 
-.section-alt { background: white; }
+.section-alt { background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 50%, #f8fafc 100%); }
 
 .container {
   max-width: 1000px;
@@ -363,6 +354,7 @@ img { max-width: 100%; display: block; }
 .stat-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(37, 99, 235, 0.15);
+  border-left: 3px solid var(--blue);
 }
 
 .stat-number {
@@ -380,11 +372,11 @@ img { max-width: 100%; display: block; }
 
 /* === Glassmorphism === */
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 /* === Skills === */
@@ -472,6 +464,7 @@ img { max-width: 100%; display: block; }
 .timeline-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid var(--blue);
 }
 
 .timeline-dot {
@@ -565,6 +558,7 @@ img { max-width: 100%; display: block; }
 .edu-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid var(--blue);
 }
 
 .edu-institution {

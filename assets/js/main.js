@@ -55,7 +55,7 @@
       const dy = p.y - mouse.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < MOUSE_RADIUS && dist > 0) {
-        const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS * 0.03;
+        const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS * 0.045;
         p.vx += (dx / dist) * force;
         p.vy += (dy / dist) * force;
       }
