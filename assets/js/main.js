@@ -34,27 +34,6 @@
   counters.forEach(function (c) { obs.observe(c); });
 })();
 
-// ============================================
-// Active Nav Highlighting
-// ============================================
-(function () {
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('.header-nav a');
-  if (!sections.length || !navLinks.length) return;
-
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        var id = entry.target.getAttribute('id');
-        navLinks.forEach(function (link) {
-          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-        });
-      }
-    });
-  }, { rootMargin: '-40% 0px -60% 0px' });
-
-  sections.forEach(function (s) { observer.observe(s); });
-})();
 
 // ============================================
 // Smooth Scroll for Nav Links
