@@ -5,11 +5,6 @@ layout: default
 <!-- Header -->
 <header class="site-header">
   <a href="#" class="header-name">RAVI KIRAN MEKALA</a>
-  <nav class="header-nav">
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
 </header>
 
 <!-- Intro -->
@@ -17,20 +12,62 @@ layout: default
   <div class="intro-avatar-wrapper">
     <img src="{{ site.logo }}" alt="Ravi Kiran Mekala" class="intro-avatar">
   </div>
-  <h1 class="intro-heading">Senior Software Engineer building scalable systems, AI-powered solutions, and high-throughput data pipelines.</h1>
+  <h1 class="intro-heading">Senior Software Engineer & Builder.</h1>
   <div class="intro-bio">
-    <p>I'm Ravi Kiran Mekala, a results-driven software engineer based in {{ site.location }} with over seven years of experience. I specialize in architecting microservices, optimizing cloud-based pipelines, and building reliable, high-performance solutions for complex, distributed environments.</p>
-    <p>Recently, I've been focused on integrating AI and LLM capabilities into production systems — from RAG-powered email intelligence to automated malware classification pipelines.</p>
+    <p>I'm Ravi Kiran Mekala, a software engineer who thrives at the intersection of distributed systems and AI. I specialize in architecting microservices, optimizing cloud-based pipelines, integrating LLM capabilities into production systems, and building infrastructure that scales without surprises.</p>
   </div>
   <div class="intro-links">
     <a href="mailto:{{ site.email }}">Email</a>
     <a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
     <a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://drive.google.com/file/d/1L1u78LpVxVdqeqI8nnZlNzHk3QDz0e4x/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="section">
+  <h2 class="section-label">EXPERIENCE</h2>
+  <div class="table-list">
+    {% for job in site.data.experience %}
+    <div class="table-row">
+      <div class="table-cell table-cell-name">
+        <img src="{{ job.icon }}" alt="{{ job.company }}" class="table-icon">
+        <span class="table-primary">{{ job.company }}</span>
+      </div>
+      <div class="table-cell table-cell-detail">
+        <span class="table-secondary">{{ job.role }}</span>
+      </div>
+      <div class="table-cell table-cell-meta">
+        <span class="table-muted">{{ job.period }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section">
+  <h2 class="section-label">EDUCATION</h2>
+  <div class="table-list">
+    {% for edu in site.data.education %}
+    <div class="table-row">
+      <div class="table-cell table-cell-name">
+        <img src="{{ edu.icon }}" alt="{{ edu.institution }}" class="table-icon">
+        <span class="table-primary">{{ edu.institution }}</span>
+      </div>
+      <div class="table-cell table-cell-detail">
+        <span class="table-secondary">{{ edu.degree }}</span>
+      </div>
+      <div class="table-cell table-cell-meta">
+        <span class="table-muted">{{ edu.period }}</span>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
 <!-- Stats -->
-<section class="section">
+<section class="section section-no-border">
   <div class="stats-row">
     <div class="stat-item">
       <span class="stat-value" data-target="7" data-suffix="+">7+</span>
@@ -47,36 +84,9 @@ layout: default
   </div>
 </section>
 
-<!-- Experience -->
-<section id="experience" class="section">
-  <h2 class="section-heading">Experience</h2>
-  <div class="experience-list">
-    {% for job in site.data.experience %}
-    <div class="experience-item">
-      <div class="experience-header">
-        <div class="experience-left">
-          <span class="experience-company">{{ job.company }}</span>
-          <span class="experience-role">{{ job.role }}</span>
-        </div>
-        <div class="experience-right">
-          <span class="experience-period">{{ job.period }}</span>
-          <span class="experience-location">{{ job.location }}</span>
-        </div>
-      </div>
-      <div class="experience-tech">{{ job.tech }}</div>
-      <ul class="experience-bullets">
-        {% for bullet in job.bullets %}
-        <li>{{ bullet }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
 <!-- Skills -->
 <section id="skills" class="section">
-  <h2 class="section-heading">Skills & Tools</h2>
+  <h2 class="section-label">SKILLS & TOOLS</h2>
   {% for group in site.data.skills %}
   <div class="skills-group">
     <h3 class="skills-category">{{ group.category }}</h3>
@@ -87,36 +97,6 @@ layout: default
     </div>
   </div>
   {% endfor %}
-</section>
-
-<!-- Education -->
-<section id="education" class="section">
-  <h2 class="section-heading">Education</h2>
-  <div class="education-list">
-    {% for edu in site.data.education %}
-    <div class="education-item">
-      <div class="education-header">
-        <div class="education-left">
-          <span class="education-institution">{{ edu.institution }}</span>
-          <span class="education-degree">{{ edu.degree }}</span>
-        </div>
-        <div class="education-right">
-          <span class="education-period">{{ edu.period }}</span>
-          {% if edu.gpa != "" %}<span class="education-gpa">GPA: {{ edu.gpa }}</span>{% endif %}
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- Achievement -->
-<section class="section">
-  <div class="achievement-card">
-    <span class="achievement-label">Recognition</span>
-    <h3 class="achievement-title">Geospatial World Innovation Award 2018</h3>
-    <p class="achievement-desc">Recognized for innovative GPS-based locality mapping solution at Delhivery</p>
-  </div>
 </section>
 
 <!-- Footer -->
