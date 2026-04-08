@@ -1,34 +1,24 @@
 - company: Microsoft
   role: Senior Software Engineer
   period: "2026"
-  location: Redmond, WA
   icon: /assets/img/logos/microsoft.png
-  bullets: []
 
 - company: Sur La Table
   role: Senior Software Engineer
-  period: "2024–2026"
-  location: Dallas, TX
+  period: "2024"
   icon: /assets/img/logos/surlatable.png
-  bullets: []
 
 - company: BlackBerry
   role: Machine Learning Engineer Intern
   period: "2023"
-  location: Dallas, TX
   icon: /assets/img/logos/blackberry.png
-  bullets: []
 
 - company: Vyntelligence
   role: Senior Software Engineer
-  period: "2021–2022"
-  location: Remote
+  period: "2021"
   icon: /assets/img/logos/vyntelligence.png
-  bullets: []
 
 - company: Delhivery
-  role: Senior Software Engineer
-  period: "2016–2021"
-  location: India
+  role: Software Engineer
+  period: "2016"
   icon: /assets/img/logos/delhivery.png
-  bullets: []
