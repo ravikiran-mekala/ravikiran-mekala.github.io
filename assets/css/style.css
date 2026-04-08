@@ -80,6 +80,8 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 2rem;
+  max-width: 816px;
+  margin: 0 auto;
   background: var(--bg-header);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -139,7 +141,7 @@ img { max-width: 100%; display: block; }
 /* === Intro === */
 .intro {
   padding: 8rem 2rem 4rem;
-  max-width: 680px;
+  max-width: 816px;
   margin: 0 auto;
 }
 
@@ -209,7 +211,7 @@ img { max-width: 100%; display: block; }
 /* === Sections === */
 .section {
   padding: 3rem 2rem;
-  max-width: 680px;
+  max-width: 816px;
   margin: 0 auto;
   border-top: 1px solid var(--border-light);
   transition: border-color 0.3s ease;
@@ -235,12 +237,12 @@ img { max-width: 100%; display: block; }
 
 .table-row {
   display: grid;
-  grid-template-columns: minmax(180px, 1.2fr) 1fr auto;
+  grid-template-columns: 240px 1fr auto;
   align-items: center;
   padding: 1.1rem 0;
   border-bottom: 1px solid var(--border-light);
   gap: 1.5rem;
-  transition: opacity 0.3s ease, border-color 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .table-row:last-child {
@@ -294,14 +296,6 @@ img { max-width: 100%; display: block; }
   transition: color 0.3s ease;
 }
 
-/* Hover dimming */
-.table-list:hover .table-row {
-  opacity: 0.4;
-}
-
-.table-list:hover .table-row:hover {
-  opacity: 1;
-}
 
 /* === Skills === */
 .skills-group {
@@ -348,7 +342,7 @@ img { max-width: 100%; display: block; }
 /* === Footer === */
 .site-footer {
   padding: 2rem;
-  max-width: 680px;
+  max-width: 816px;
   margin: 0 auto;
   border-top: 1px solid var(--border-light);
   transition: border-color 0.3s ease;
@@ -390,6 +384,13 @@ img { max-width: 100%; display: block; }
   font-size: 13px;
   color: var(--text-muted);
   transition: color 0.3s ease;
+}
+
+/* Dark mode icon visibility fix */
+[data-theme="dark"] .table-icon {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px;
+  border-radius: 6px;
 }
 
 /* === Subtle Page Load Animation === */
