@@ -343,15 +343,15 @@ img { max-width: 100%; display: block; }
 }
 
 .interest-logo-dark {
-  display: none;
+  display: none !important;
 }
 
 [data-theme="dark"] .interest-logo-light {
-  display: none;
+  display: none !important;
 }
 
 [data-theme="dark"] .interest-logo-dark {
-  display: block;
+  display: block !important;
 }
 
 .interest-name {
