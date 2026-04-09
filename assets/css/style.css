@@ -342,6 +342,18 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.5rem;
 }
 
+.interest-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .interest-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .interest-logo-dark {
+  display: block;
+}
+
 .interest-name {
   font-family: var(--font-heading);
   font-size: 15px;
