@@ -325,6 +325,13 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.5rem;
 }
 
+.interest-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
 .interest-name {
   font-family: var(--font-heading);
   font-size: 15px;
