@@ -313,6 +313,7 @@ img { max-width: 100%; display: block; }
   background: var(--bg-surface);
   border-radius: 12px;
   transition: background 0.2s, transform 0.2s, opacity 0.3s;
+  position: relative;
 }
 
 .interest-card:hover {
@@ -350,21 +351,28 @@ img { max-width: 100%; display: block; }
   transition: color 0.3s ease;
 }
 
-/* Detail hidden by default, revealed on hover */
+/* Detail as floating tooltip popup */
 .interest-detail {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--text-muted);
-  margin-top: 0.25rem;
-  transition: color 0.3s ease, opacity 0.2s ease;
+  line-height: 1.4;
+  padding: 0.5rem 0.75rem;
+  background: var(--text-primary);
+  color: var(--bg-page);
+  border-radius: 6px;
+  white-space: nowrap;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
 }
 
 .interest-card:hover .interest-detail {
   opacity: 1;
-  max-height: 3em;
 }
 
 /* === Trails & Parks === */
