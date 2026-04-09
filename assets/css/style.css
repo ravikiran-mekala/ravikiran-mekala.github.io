@@ -326,8 +326,8 @@ img { max-width: 100%; display: block; }
 }
 
 .interest-logo {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   margin-bottom: 0.5rem;
 }
@@ -369,23 +369,40 @@ img { max-width: 100%; display: block; }
   transition: color 0.3s ease;
 }
 
-.parks-state-label {
-  font-family: var(--font-heading);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
-}
-
-.parks-state-label:first-of-type {
-  margin-top: 0;
-}
-
 .park-badge-muted {
   opacity: 0.5;
   font-style: italic;
+}
+
+/* Trek badge tooltips */
+.park-badge[data-tooltip] {
+  position: relative;
+  cursor: default;
+}
+
+.park-badge[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: var(--text-primary);
+  color: var(--bg-page);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.4;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.park-badge[data-tooltip]:hover::after {
+  opacity: 1;
 }
 
 .parks-grid {
@@ -409,6 +426,94 @@ img { max-width: 100%; display: block; }
   background: var(--bg-surface-hover);
   color: var(--text-primary);
   transform: translateY(-1px);
+}
+
+/* === States Grid === */
+.states-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+.state-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: default;
+}
+
+.state-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.state-item:hover .state-icon {
+  background: var(--bg-surface-hover);
+  transform: translateY(-2px);
+}
+
+.state-svg {
+  width: 24px;
+  height: 24px;
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+
+.state-item:hover .state-svg {
+  color: var(--text-primary);
+}
+
+.state-abbr {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  letter-spacing: 0.04em;
+  transition: color 0.3s ease;
+}
+
+.state-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.6rem 0.85rem;
+  background: var(--text-primary);
+  color: var(--bg-page);
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.state-tooltip strong {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.state-tooltip span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+.state-item:hover .state-tooltip {
+  opacity: 1;
 }
 
 /* === Footer === */

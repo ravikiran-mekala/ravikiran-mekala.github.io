@@ -77,22 +77,22 @@ layout: default
     <div class="interest-card">
       <span class="interest-emoji">🏋️</span>
       <span class="interest-name">Gym</span>
-      <span class="interest-detail">Daily ritual</span>
+      <span class="interest-detail">Upper, lower, repeat</span>
     </div>
     <div class="interest-card">
       <span class="interest-emoji">🏔️</span>
       <span class="interest-name">Hiking</span>
-      <span class="interest-detail">High passes & national parks</span>
+      <span class="interest-detail">Way too much to list. Scroll down.</span>
     </div>
     <div class="interest-card">
       <span class="interest-emoji">🎤</span>
       <span class="interest-name">Concerts</span>
-      <span class="interest-detail">Live music lover</span>
+      <span class="interest-detail">Coldplay · JT · Post Malone · Maroon 5</span>
     </div>
     <div class="interest-card">
-      <img src="/assets/img/onepiece.png" alt="One Piece" class="interest-logo">
-      <span class="interest-name">One Piece</span>
-      <span class="interest-detail">Straw Hat forever</span>
+      <img src="/assets/img/onepiece.png" alt="Anime" class="interest-logo">
+      <span class="interest-name">Anime</span>
+      <span class="interest-detail">One conversation and we won't stop</span>
     </div>
   </div>
 </section>
@@ -104,8 +104,8 @@ layout: default
 
   <h3 class="subsection-label">TREKS · INDIA</h3>
   <div class="parks-grid">
-    <span class="park-badge">🏔️ Kedarkantha Pass</span>
-    <span class="park-badge">🏔️ Rupin Pass</span>
+    <span class="park-badge" data-tooltip="12,500 ft — First trek. Instant addiction.">🏔️ Kedarkantha Pass</span>
+    <span class="park-badge" data-tooltip="15,350 ft — 15,350 ft of questioning life choices">🏔️ Rupin Pass</span>
   </div>
 
   <h3 class="subsection-label" style="margin-top: 2rem;">TREKS · USA</h3>
@@ -114,60 +114,97 @@ layout: default
   </div>
 
   <h3 class="subsection-label" style="margin-top: 2rem;">NATIONAL PARKS</h3>
-
-  <h4 class="parks-state-label">Utah</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🏜️ Arches</span>
-    <span class="park-badge">🪨 Bryce Canyon</span>
-    <span class="park-badge">🏜️ Canyonlands</span>
-    <span class="park-badge">🪨 Capitol Reef</span>
-    <span class="park-badge">⛰️ Zion</span>
-  </div>
-
-  <h4 class="parks-state-label">California</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🌡️ Death Valley</span>
-    <span class="park-badge">🌲 Redwood</span>
-  </div>
-
-  <h4 class="parks-state-label">Washington</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🗻 Mt. Rainier</span>
-    <span class="park-badge">🌲 North Cascades</span>
-    <span class="park-badge">🌧️ Olympic</span>
-  </div>
-
-  <h4 class="parks-state-label">Texas</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🌵 Big Bend</span>
-    <span class="park-badge">⛰️ Guadalupe Mtns</span>
-  </div>
-
-  <h4 class="parks-state-label">New Mexico</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🦇 Carlsbad Caverns</span>
-    <span class="park-badge">🏖️ White Sands</span>
-  </div>
-
-  <h4 class="parks-state-label">Arizona</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🏜️ Grand Canyon</span>
-  </div>
-
-  <h4 class="parks-state-label">Colorado</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🏔️ Rocky Mountain</span>
-  </div>
-
-  <h4 class="parks-state-label">Oregon</h4>
-  <div class="parks-grid">
-    <span class="park-badge">💧 Crater Lake</span>
-  </div>
-
-  <h4 class="parks-state-label">Florida</h4>
-  <div class="parks-grid">
-    <span class="park-badge">🐊 Everglades</span>
-    <span class="park-badge">🌊 Biscayne</span>
+  <div class="states-grid">
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/ut.svg" alt="Utah" class="state-svg">
+      </div>
+      <span class="state-abbr">UT</span>
+      <div class="state-tooltip">
+        <strong>Utah</strong>
+        <span>Arches · Bryce Canyon · Canyonlands · Capitol Reef · Zion</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/ca.svg" alt="California" class="state-svg">
+      </div>
+      <span class="state-abbr">CA</span>
+      <div class="state-tooltip">
+        <strong>California</strong>
+        <span>Death Valley · Redwood</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/wa.svg" alt="Washington" class="state-svg">
+      </div>
+      <span class="state-abbr">WA</span>
+      <div class="state-tooltip">
+        <strong>Washington</strong>
+        <span>Mt. Rainier · North Cascades · Olympic</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/tx.svg" alt="Texas" class="state-svg">
+      </div>
+      <span class="state-abbr">TX</span>
+      <div class="state-tooltip">
+        <strong>Texas</strong>
+        <span>Big Bend · Guadalupe Mtns</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/nm.svg" alt="New Mexico" class="state-svg">
+      </div>
+      <span class="state-abbr">NM</span>
+      <div class="state-tooltip">
+        <strong>New Mexico</strong>
+        <span>Carlsbad Caverns · White Sands</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/az.svg" alt="Arizona" class="state-svg">
+      </div>
+      <span class="state-abbr">AZ</span>
+      <div class="state-tooltip">
+        <strong>Arizona</strong>
+        <span>Grand Canyon</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/co.svg" alt="Colorado" class="state-svg">
+      </div>
+      <span class="state-abbr">CO</span>
+      <div class="state-tooltip">
+        <strong>Colorado</strong>
+        <span>Rocky Mountain</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/or.svg" alt="Oregon" class="state-svg">
+      </div>
+      <span class="state-abbr">OR</span>
+      <div class="state-tooltip">
+        <strong>Oregon</strong>
+        <span>Crater Lake</span>
+      </div>
+    </div>
+    <div class="state-item">
+      <div class="state-icon">
+        <img src="/assets/img/states/fl.svg" alt="Florida" class="state-svg">
+      </div>
+      <span class="state-abbr">FL</span>
+      <div class="state-tooltip">
+        <strong>Florida</strong>
+        <span>Everglades · Biscayne</span>
+      </div>
+    </div>
   </div>
 </section>
 
