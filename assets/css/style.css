@@ -362,51 +362,23 @@ img { max-width: 100%; display: block; }
   transition: color 0.3s ease;
 }
 
-.treks-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.trek-card {
-  display: flex;
-  flex-direction: column;
-  padding: 1.25rem;
-  background: var(--bg-surface);
-  border-radius: 12px;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.trek-card:hover {
-  background: var(--bg-surface-hover);
-  transform: translateY(-2px);
-}
-
-.trek-elevation {
-  font-family: var(--font-mono);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.03em;
-  margin-bottom: 0.25rem;
-  transition: color 0.3s ease;
-}
-
-.trek-name {
+.parks-state-label {
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-secondary);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
 
-.trek-location {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 0.25rem;
-  transition: color 0.3s ease;
+.parks-state-label:first-of-type {
+  margin-top: 0;
+}
+
+.park-badge-muted {
+  opacity: 0.5;
+  font-style: italic;
 }
 
 .parks-grid {
@@ -546,10 +518,6 @@ img { max-width: 100%; display: block; }
 
   .interests-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .treks-row {
-    grid-template-columns: 1fr;
   }
 
   .site-footer {
