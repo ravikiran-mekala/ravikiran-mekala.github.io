@@ -70,19 +70,74 @@ layout: default
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills" class="section">
-  <h2 class="section-label">SKILLS & TOOLS</h2>
-  {% for group in site.data.skills %}
-  <div class="skills-group">
-    <h3 class="skills-category">{{ group.category }}</h3>
-    <div class="skill-pills">
-      {% for skill in group.items %}
-      <span class="skill-pill">{{ skill }}</span>
-      {% endfor %}
+<!-- Beyond Code -->
+<section class="section">
+  <h2 class="section-label">BEYOND CODE</h2>
+  <div class="interests-grid">
+    <div class="interest-card">
+      <span class="interest-emoji">🏋️</span>
+      <span class="interest-name">Gym</span>
+      <span class="interest-detail">Daily ritual</span>
+    </div>
+    <div class="interest-card">
+      <span class="interest-emoji">🏔️</span>
+      <span class="interest-name">Hiking</span>
+      <span class="interest-detail">High passes & national parks</span>
+    </div>
+    <div class="interest-card">
+      <span class="interest-emoji">🎤</span>
+      <span class="interest-name">Singing</span>
+      <span class="interest-detail">Shower concerts & beyond</span>
+    </div>
+    <div class="interest-card">
+      <span class="interest-emoji">☠️</span>
+      <span class="interest-name">One Piece</span>
+      <span class="interest-detail">Straw Hat forever</span>
     </div>
   </div>
-  {% endfor %}
+</section>
+
+<!-- Trails & Parks -->
+<section class="section">
+  <h2 class="section-label">TRAILS & PARKS</h2>
+  <p class="section-intro">I spend most of my weekends outdoors — whether it's a multi-day Himalayan trek or a sunrise hike through a national park. So far I've summited two high-altitude passes and visited 19 US national parks.</p>
+
+  <h3 class="subsection-label">SUMMIT PASSES</h3>
+  <div class="treks-row">
+    <div class="trek-card">
+      <span class="trek-elevation">12,500 ft</span>
+      <span class="trek-name">Kedarkantha Pass</span>
+      <span class="trek-location">Uttarakhand, India</span>
+    </div>
+    <div class="trek-card">
+      <span class="trek-elevation">15,350 ft</span>
+      <span class="trek-name">Rupin Pass</span>
+      <span class="trek-location">Himachal Pradesh, India</span>
+    </div>
+  </div>
+
+  <h3 class="subsection-label">NATIONAL PARKS</h3>
+  <div class="parks-grid">
+    <span class="park-badge" title="Arches National Park">🏜️ Arches</span>
+    <span class="park-badge" title="Big Bend National Park">🌵 Big Bend</span>
+    <span class="park-badge" title="Biscayne National Park">🌊 Biscayne</span>
+    <span class="park-badge" title="Bryce Canyon National Park">🪨 Bryce Canyon</span>
+    <span class="park-badge" title="Canyonlands National Park">🏜️ Canyonlands</span>
+    <span class="park-badge" title="Capitol Reef National Park">🪨 Capitol Reef</span>
+    <span class="park-badge" title="Carlsbad Caverns National Park">🦇 Carlsbad Caverns</span>
+    <span class="park-badge" title="Crater Lake National Park">💧 Crater Lake</span>
+    <span class="park-badge" title="Death Valley National Park">🌡️ Death Valley</span>
+    <span class="park-badge" title="Everglades National Park">🐊 Everglades</span>
+    <span class="park-badge" title="Grand Canyon National Park">🏜️ Grand Canyon</span>
+    <span class="park-badge" title="Guadalupe Mountains National Park">⛰️ Guadalupe Mtns</span>
+    <span class="park-badge" title="Mount Rainier National Park">🗻 Mt. Rainier</span>
+    <span class="park-badge" title="North Cascades National Park">🌲 North Cascades</span>
+    <span class="park-badge" title="Olympic National Park">🌧️ Olympic</span>
+    <span class="park-badge" title="Redwood National Park">🌲 Redwood</span>
+    <span class="park-badge" title="Rocky Mountain National Park">🏔️ Rocky Mountain</span>
+    <span class="park-badge" title="White Sands National Park">🏖️ White Sands</span>
+    <span class="park-badge" title="Zion National Park">⛰️ Zion</span>
+  </div>
 </section>
 
 <!-- Footer -->
