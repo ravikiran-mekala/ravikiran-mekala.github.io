@@ -77,31 +77,69 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     return 'Stay hydrated out there';
   }
 
-  // --- Format local time (e.g. "8:47 PM") ---
-  function formatTime(date) {
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    if (hours === 0) hours = 12;
-    var minStr = minutes < 10 ? '0' + minutes : minutes;
-    return hours + ':' + minStr + ' ' + ampm;
+  // --- Format time in a specific timezone (e.g. "8:47 PM") ---
+  function formatTimeInTz(timezone) {
+    try {
+      return new Intl.DateTimeFormat('en-US', {
+        timeZone: timezone,
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      }).format(new Date());
+    } catch (e) {
+      return null;
+    }
   }
 
-  // --- Render greeting line immediately (no API needed) ---
-  var now = new Date();
-  var hour = now.getHours();
-  var day = now.getDay();
-  greetingEl.textContent = getGreeting(hour) + ' — ' + dayMessages[day] + '.';
+  // --- Get hour (0-23) and day-of-week (0-6) in a specific timezone ---
+  function getTzParts(timezone) {
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: timezone,
+        hour: 'numeric',
+        weekday: 'short',
+        hour12: false
+      }).formatToParts(new Date());
+      var hourStr, weekday;
+      parts.forEach(function (p) {
+        if (p.type === 'hour') hourStr = p.value;
+        if (p.type === 'weekday') weekday = p.value;
+      });
+      var dayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      var hour = parseInt(hourStr, 10);
+      // Intl can return "24" for midnight in some locales — normalize to 0
+      if (hour === 24) hour = 0;
+      return { hour: hour, day: dayMap[weekday] };
+    } catch (e) {
+      return null;
+    }
+  }
 
-  // --- Fetch geo + weather, then render weather line ---
+  // --- Render greeting using a timezone (or browser default if none) ---
+  function renderGreeting(timezone) {
+    var parts = timezone ? getTzParts(timezone) : null;
+    if (!parts) {
+      var now = new Date();
+      parts = { hour: now.getHours(), day: now.getDay() };
+    }
+    greetingEl.textContent = getGreeting(parts.hour) + ' — ' + dayMessages[parts.day] + '.';
+  }
+
+  // --- Initial render with browser timezone (instant, no wait for API) ---
+  renderGreeting(null);
+
+  // --- Fetch geo + weather, then re-render with geo timezone ---
   fetch('https://get.geojs.io/v1/ip/geo.json')
     .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
     .then(function (geo) {
       var city = geo.city || geo.region || '';
       var lat = geo.latitude;
       var lon = geo.longitude;
+      var tz = geo.timezone;
       if (!lat || !lon) throw new Error('no coords');
+
+      // Re-render greeting using the geo-determined timezone
+      if (tz) renderGreeting(tz);
 
       return fetch(
         'https://api.open-meteo.com/v1/forecast?latitude=' + lat +
@@ -111,15 +149,17 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         .then(function (wx) {
           var tempF = wx.current_weather && wx.current_weather.temperature;
           if (tempF === undefined) throw new Error('no temp');
+          var timeStr = (tz && formatTimeInTz(tz)) || formatTimeInTz(Intl.DateTimeFormat().resolvedOptions().timeZone);
           var locStr = city ? ' in ' + city : ' where you are';
-          var msg = "It's " + formatTime(new Date()) + locStr + ' — ' +
+          var msg = "It's " + timeStr + locStr + ' — ' +
                     Math.round(tempF) + '°F · ' + weatherMood(tempF) + '.';
           weatherEl.textContent = msg;
         });
     })
     .catch(function () {
-      // Graceful fallback: just show local time
-      weatherEl.textContent = "It's " + formatTime(new Date()) + ' where you are.';
+      // Graceful fallback: just show browser-local time
+      var fallbackTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      weatherEl.textContent = "It's " + formatTimeInTz(fallbackTz) + ' where you are.';
     });
 })();
 
