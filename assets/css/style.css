@@ -562,6 +562,26 @@ img { max-width: 100%; display: block; }
   transition: border-color 0.3s ease;
 }
 
+.footer-message {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  min-height: 1px;
+}
+
+.footer-greeting,
+.footer-weather {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.footer-greeting:empty,
+.footer-weather:empty {
+  display: none;
+}
+
 .footer-inner {
   display: flex;
   justify-content: space-between;
